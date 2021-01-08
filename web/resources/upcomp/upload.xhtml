@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <!-- INTERFACE -->
+    <cc:interface>
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+
+
+            <p:defaultCommand  target="idBtnSalvarHino" scope="idPanelConteudo" rendered="#{fileUploadView.exibirPlayer}"  />
+        <p:panel id="idPanelConteudo" class="panelConteudo" rendered="#{admbSerranaBean.renderizacao.gridUplodHino}"   >
+            <p:graphicImage library="imagens" name="louvor.jpg" width="320" height="250" rendered="#{fileUploadView.exibirPlayer == false}"/>
+            <h:panelGrid id="idGridAdicionarHino" class="gridAdicionarHino" columns="1"   >
+                <h:panelGrid columns="2" cellspacing="15"  >
+                    <p:fileUpload  label="Adicione o louvor"    listener="#{fileUploadView.handleFileUpload}" 
+                                   sizeLimit="100000000" allowTypes="/(\.|\/)(mpeg)$/" auto="true"  update="@form" /> 
+                </h:panelGrid>
+            </h:panelGrid>
+            <h:panelGrid  id="idGridPlayer" class="gridPlayer" width="100%" cellspacing="10" columns="1" rendered="#{fileUploadView.exibirPlayer}" >
+                <audio  controls="controls"  >
+                    <source  src="resources/#{admbSerranaBean.setores.login}/#{fileUploadView.nomeArquivoReal}" type="audio/mpeg"></source>
+                    Your browser does not support the <code>audio</code> tag.
+                </audio>
+                <p:outputLabel class="confirmarNome" value="Nome do louvor" />
+                <p:outputLabel value="#{fileUploadView.nomeArquivo}" />
+
+            </h:panelGrid>
+            <p:panel rendered="#{fileUploadView.exibirPlayer}" >
+
+                <div class="ui-g ui-fluid">
+                    <div class="ui-g-12 ui-md-4">
+                        <div class="ui-inputgroup">
+                            <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                            <p:inputText  value="#{admbSerranaBean.hinos.nomeCantor}" placeholder="Insira o cantor" />      
+                        </div>                            
+                        <div class="ui-inputgroup">
+                            <span class="ui-inputgroup-addon"><i class="pi pi-key"></i></span>
+                            <p:inputText  value="#{admbSerranaBean.hinos.nomeLouvor}" placeholder="Insira o nome do louvor" />      
+                        </div>                     
+
+                    </div>
+
+                </div>
+            </p:panel>
+            <h:panelGrid id="idGridSalvarHino" columns="2" style="text-align: center" cellspacing="15" rendered="#{fileUploadView.exibirPlayer}"  >
+                <p:commandButton value="Cancelar" update="@form" action="#{admbSerranaBean.cancelarUploadDeHino()}" />
+                <p:commandButton id="idBtnSalvarHino" value="Salvar" update="@form" action="#{admbSerranaBean.salvarHinos()}" />
+            </h:panelGrid>
+        </p:panel>
+    </cc:implementation>
+</html>

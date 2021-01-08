@@ -1,0 +1,9 @@
+ <h:panelGrid columns="3" rendered="#{admbSerranaBean.renderizacao.gridBuscarSetor}" >
+                <div>
+                    <p:autoComplete  id="idAutoCompleteSetor" value="#{admbSerranaBean.setores}" completeMethod="#{admbSerranaBean.buscarSetoresAutoComplete}" var="setores" 
+                                     itemLabel="#{setores.setor}" itemValue="#{setores}" forceSelection="true" dropdown="true"   converter="converterSetor"  placeholder="Setor da Igreja"  />    
+                    <p:commandButton class="btnBuscarSetorParaUploadHino"  id="idBtnBuscarSetorParaUploadHino"  action="#{admbSerranaBean.buscarSetorParaUploadHino()}"  icon="pi pi-search" update="@form" />
+                </div>
+            </h:panelGrid>
+
+ <me:menu id="idMenu" />

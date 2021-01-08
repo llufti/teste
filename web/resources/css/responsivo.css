@@ -1,0 +1,188 @@
+@charset "UTF-8"; 
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right:  auto;
+    padding: 0px;   
+
+
+}
+
+@media 
+(min-width: 360px){
+    .ui-breadcrumb{
+      font-size: 120%!important;
+      background-color: blue!important;
+    }
+    .ui-autocomplete-input{
+        width: 100%!important;
+    }
+    .gridMenuLogado{
+        text-align: center!important;
+
+    }
+    .gridOuvirHino{
+        font-size: 110%!important;
+    }
+    .idDivLblPesquisarLouvor{
+        margin-top: 3%!important;
+        font-size: 110%!important;
+        font-weight: bold!important;
+    }
+    .administrador{
+        margin-top: 5%!important;
+        font-size: 110%!important;
+        font-weight: bold!important;
+    }
+    .facetLblTodosLouvores{
+    }
+    .gridFiltrarHino{
+        text-align: center!important;
+        margin-top: 2%!important;
+    }
+
+    .gridFiltrarSetor{
+        text-align: center!important;
+        margin-top:0%!important;
+    }
+    .lblPesquisarLouvor{
+        margin-top: 5%!important;
+        font-size: 130%!important;
+    }
+    .lblPesquisarSetor{
+        margin-top: 5%!important;
+        font-size: 130%!important;
+    }
+    .btnOuvirHino{
+        width: 35px!important;
+    }
+
+    .ui-button-text{
+        display:inline!important;
+        font-size: 120%!important;
+        text-align: center!important;
+    }
+    .panelTituloMenu{        
+        background-color: #336cd6!important;
+
+    }
+    .gridTituloLogin{        
+        text-align: center!important;
+    }
+    .lblAssemblia{
+        font-size: 90%!important;
+        font-weight: bold;
+    }
+    .lblSubTitulo{
+        font-size: 80%!important;
+    }
+    .panelDadosIgreja{
+        margin-bottom: 5%!important;
+    }
+    .ui-password{
+
+    }
+    .lblNomeUsuario{
+        font-size: 130%!important;;
+        font-weight: bold;
+        margin-left: 15%!important;
+    }
+    .lblTituloEnviarHino{
+        font-size: 110%!important;
+        font-weight: bold!important;
+        margin-top: 3%!important;
+        margin-bottom:  3%!important;
+    }
+    .linkNaoCadastrado{
+        font-size: 100%!important;
+        margin-top: 5%!important;
+    }
+    .lblNaoTemCadastro{
+        color: #117bf1!important;
+        font-weight: bold!important;
+
+    }
+    .confirmarNome{
+        font-size: 120%!important;
+        font-weight: bold!important;
+    }
+    .nomeHinoCantor{
+        font-size: 120%!important;
+        font-weight: bold!important;
+    }
+    .txtNomeHino{
+        width: 100%!important;
+    }
+    .lblTituloLogin{
+        font-size: 150%!important;
+        font-weight: bold!important;
+        margin-top: 10%!important;
+        margin-bottom:  3%!important;
+
+    }
+    .btnLogar{
+        font-size: 130%!important;
+    }
+    .ui-inputgroup{
+        padding-bottom: 8%!important;
+        font-size: 130%!important;
+
+    }
+    .gridPlayer{
+        margin-top: -5%!important;
+        text-align: center!important;
+    }
+    .lblTituloMenu{
+        font-size: 150%!important;
+        font-weight: bold!important;
+        color: white!important;
+    }
+    .panelConteudo{
+    }
+    .ui-autocomplete-input{
+        text-align: center!important;   
+    }
+    .pi pi-search{
+
+    }
+    .ui-fileupload-buttonbar{
+        border: none!important;
+        background-color: black!important;   
+
+    }   
+    .ui-fileupload-choose{        
+        font-size: 80%!important;
+        width: 120%!important;     
+    }
+    .ui-fileupload-content{
+        border: none!important;
+        display: none!important;
+    }
+    .ui-fileupload{
+
+        width: 100%!important;
+        font-size: 110%!important;
+        border: none!important;
+        margin-left: -10%!important;
+    }
+
+
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+
+    }
+}
+
+
+

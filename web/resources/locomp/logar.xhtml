@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <!-- INTERFACE -->
+    <cc:interface>
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+        <p:panel rendered="#{admbSerranaBean.renderizacao.logar}">
+            <h:panelGrid width="100%" class="gridTituloLogin" columns="1" rendered="#{admbSerranaBean.renderizacao.logar}" >
+                <p:outputLabel class="lblAssemblia" value="Assembleia de Deus M. Belém (Ribeirão Preto) " />
+                <p:outputLabel class="lblSubTitulo" value=" SubSede Serrana" />
+                <p:outputLabel class="lblSubTitulo" value="Rua: Antonio Batista Nº419" />
+                <p:outputLabel class="lblSubTitulo" value="Pastor: Rivaldo Tulio de Queiros" />
+            </h:panelGrid>
+            <div class="lblTituloLogin">
+                <p:outputLabel  value="Insira se nome e senha" />
+            </div>
+
+            <div class="ui-g ui-fluid">
+                <div class="ui-g-12 ui-md-4">
+                    <div class="ui-inputgroup">
+                        <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <p:inputText id="idTxtNomeLogin" value="#{admbSerranaBean.setores.login}" placeholder="Digite seu nome" />      
+                    </div>                            
+                    <div class="ui-inputgroup">
+                        <span class="ui-inputgroup-addon"><i class="pi pi-key"></i></span>
+                        <p:password id="idTxtSenhaLogin" value="#{admbSerranaBean.setores.senhaConfirma}" placeholder="Insira uma senha" />      
+                    </div>
+
+                    <div class="btnLogar">
+                        <p:commandButton value="Entrar" icon="pi pi-check"  action="#{admbSerranaBean.logar()}" update="@form" />
+                    </div>
+                    <div class="linkNaoCadastrado" >
+                        <p:commandLink class="lblNaoTemCadastro" value="Não tem cadastro ?" action="#{admbSerranaBean.exibirTelaCadastrar()}" update="@form" />
+                    </div>
+
+                </div>
+
+            </div>
+        </p:panel>
+    </cc:implementation>
+</html>

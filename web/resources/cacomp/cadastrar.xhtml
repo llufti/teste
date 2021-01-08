@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:p="http://primefaces.org/ui">
+
+    <!-- INTERFACE -->
+    <cc:interface>
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+        <p:panel rendered="#{admbSerranaBean.renderizacao.cadastrar}" >
+            <div class="lblTituloLogin">
+                <p:outputLabel  value="Cadastre um nome e senha" />
+            </div>
+            <div class="ui-g ui-fluid">
+                <div class="ui-g-12 ui-md-4">
+                    <div class="ui-inputgroup">
+                        <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <p:inputText id="idTxtNomeCadastro" value="#{admbSerranaBean.setores.setor}" placeholder="Digite seu nome" />      
+                    </div>                            
+                    <div class="ui-inputgroup">
+                        <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <p:inputText id="idTxtApelidoCadastro" value="#{admbSerranaBean.setores.login}" placeholder="Login" />      
+                    </div>                            
+                    <div class="ui-inputgroup">
+                        <span class="ui-inputgroup-addon"><i class="pi pi-key"></i></span>
+                        <p:password id="idTxtSenhaCadastro" value="#{admbSerranaBean.setores.senha}" placeholder="Insira uma senha" 
+                                    feedback="true" inline="true" promptLabel="Nivel" goodLabel="Boa" weakLabel="Fraca" strongLabel="Forte"/>      
+                    </div>
+                    <div class="ui-inputgroup">
+                        <span class="ui-inputgroup-addon"><i class="pi pi-key"></i></span>
+                        <p:password id="idTxtSenhaConfirmaCadastro" value="#{admbSerranaBean.setores.senhaConfirma}" placeholder="Repita sua senha" />      
+                    </div>
+                    <div class="btnLogar">
+                        <p:commandButton id="btnSalvarSetor" action="#{admbSerranaBean.salvarSetor()}" update="@form" value="Cadastrar" icon="pi pi-check" />
+                    </div>
+                    <div class="linkNaoCadastrado" >
+                        <p:commandLink class="lblNaoTemCadastro" value="Ja é cadastrado ?" action="#{admbSerranaBean.exibirTelaLogin()}" update="@form" />
+                    </div>
+                </div>
+
+            </div>
+        </p:panel>
+    </cc:implementation>
+</html>

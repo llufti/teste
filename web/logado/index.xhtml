@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:lo="http://xmlns.jcp.org/jsf/composite/locomp"
+      xmlns:ca="http://xmlns.jcp.org/jsf/composite/cacomp"
+      xmlns:mu="http://xmlns.jcp.org/jsf/composite/mucomp"
+      xmlns:up="http://xmlns.jcp.org/jsf/composite/upcomp"
+      xmlns:ml="http://xmlns.jcp.org/jsf/composite/mlcomp"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pl="http://xmlns.jcp.org/jsf/composite/plcomp"
+      xmlns:so="http://xmlns.jcp.org/jsf/composite/socomp">
+    <h:head>
+        <title>ADMB Serrana</title>
+        <h:outputStylesheet library="css" name="responsivo.css"></h:outputStylesheet>
+        <meta name="viewport" content="width=device-width"  />
+        <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces" />
+    </h:head>
+    <h:body >
+        <h:form >
+            <div align="center" class="container">
+                <p:growl id="growl"  life="2000" />
+                <p:panel id="idPanelTituloMenu" class="panelTituloMenu"  >
+                    <p:outputLabel id="idLblTituloMenu" class="lblTituloMenu" value="AD SERRANA" />
+                </p:panel>
+
+                <lo:logar id="logar"/>
+                <ca:cadastrar id="cadastrar"/>
+                <ml:menuLogado id="menuLogado" />
+                <mu:menuUsuario id="menuUsuario" />
+                <up:upload id="upload"/>
+                <pl:pesquisarLouvorUsuario id="idPesquisarLouvorParaUsuario"/>                
+                <so:sonoplasta id="idSonoplasta"/>
+
+
+            </div>
+        </h:form>
+    </h:body>
+</html>
+
